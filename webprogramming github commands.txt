@@ -1,0 +1,39 @@
+https://github.com/LTaylor137/WebProgramming_2020.git
+
+GITHUB COMMANDS
+
+init
+1. add
+fetch - gets a list of changes made on server
+diff - gets a list of what is different
+config
+2. stage -
+* - all
+blame - who has made an error
+git stage xxxxxxxx.md
+3. git commit -m "comment here"
+VIM:
+git config --global --edit
+to exit: SHIFT :  Q  ENTER
+4. git push   - push to cloud
+git pull   - pull changes from cloud
+git status
+
+
+HTML
+
+
+! TAB ENTER - dumps basic html code.
+
+CTRL SHIFT P 
+live server.
+
+
+
+
+
+
+
+
+
+
