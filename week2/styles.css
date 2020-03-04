@@ -40,16 +40,16 @@ html, body {
 }
 
 .button {
+    text-decoration: none;
     font-weight: 900;
     background-color: rgb(92, 207, 96);
-    /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
     display: inline-block;
     font-size: 20px;
     border-radius: 5px;
-}
+} 
 
 .buttonmargin {
     margin-top: 15px;
@@ -57,6 +57,7 @@ html, body {
 }
 
 .link {
+    text-decoration: none;
     color: rgb(92, 207, 96);
 }
 
@@ -64,7 +65,6 @@ html, body {
     margin-top: 30px;
     font-size: 15px;
     background-color: rgb(182, 182, 182);
-    height: 150px;
     text-align: center;
     line-height: 30px;
     color: rgb(58, 58, 58);
