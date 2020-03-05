@@ -10,7 +10,7 @@ html, body {
     font-weight: 900;
     font-size: 30px;
     margin: 0;
-    background-color: rgb(92, 207, 96);
+    background-color: rgb(142,186,62);
     height: 330px;
     text-align: center;
     line-height: 350px;
@@ -25,7 +25,7 @@ html, body {
     text-align: left;
     line-height: 30px;
     color: rgb(0, 0, 0);
-    margin: 10;
+    margin: 19;
 }
 
 .subhead {
@@ -42,7 +42,7 @@ html, body {
 .button {
     text-decoration: none;
     font-weight: 900;
-    background-color: rgb(92, 207, 96);
+    background-color: rgb(142,186,62);
     border: none;
     color: white;
     padding: 15px 32px;
@@ -52,20 +52,20 @@ html, body {
 } 
 
 .buttonmargin {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .link {
     text-decoration: none;
-    color: rgb(92, 207, 96);
+    color: rgb(142,186,62);
 }
 
 .footer {
     margin-top: 30px;
     font-size: 15px;
-    background-color: rgb(182, 182, 182);
+    background-color: rgb(239,239,239);
     text-align: center;
     line-height: 30px;
-    color: rgb(58, 58, 58);
+    color: rgb(143,143,143);
 }
