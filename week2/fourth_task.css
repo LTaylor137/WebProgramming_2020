@@ -1,0 +1,95 @@
+html, body {
+    background-color: white;
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    /* margin:40px; */
+    align-items: center;
+    justify-content: center;
+}
+
+.whitebox {
+    display: flex;
+    margin: 40px;
+    flex-direction: column;
+    justify-content: initial;
+    width: 600px;
+    padding: 50px;
+    background-color: rgb(62, 75, 86);
+}
+
+.hori {
+    
+    display: flex;
+    align-content: stretch;
+}
+
+.margin {
+    margin: 2px;
+}
+
+.facebook {
+    width: 50%;
+    display: flex;
+    background-color: rgb(61, 89, 154);
+    padding: 20px;
+    margin-bottom: 30px;
+    height: 15px;
+    text-align: left;
+    vertical-align: -25%;
+
+}
+
+.twitter {
+    width: 50%;
+    display: flex;
+    background-color: rgb(84, 172, 236);
+    padding: 20px;
+    margin-bottom: 30px;
+    height: 15px;
+    text-align: left;
+}
+
+.fnln {
+    width: 50%;
+    color: rgb(62, 75, 86);
+    /* display: flex; */
+    background-color: rgb(242, 242, 242);
+    padding: 20px;
+    margin-bottom: 30px;
+    height: 15px;
+    text-align: left;
+}
+
+.email {
+    color: rgb(62, 75, 86);
+    display: flex;
+    background-color: rgb(242, 242, 242);
+    padding: 20px;
+    margin-bottom: 30px;
+    height: 15px;
+    text-align: left;
+}
+
+.create {
+    background-color: rgb(0, 178, 65);
+    padding: 20px;
+    margin-bottom: 30px;
+    height: 15px;
+}
+
+.text {
+    margin-bottom: 30px;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(84, 172, 236);
+}
