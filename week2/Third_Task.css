@@ -2,7 +2,18 @@ html, body {
     background-color: rgb(67, 59, 79);
     margin: 0;
     font-family: 'Spartan', sans-serif;
+    /* font-weight: 400; */
     font-size: 12px;
+}
+
+.yourcompany {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Engagement', cursive;
+    color: white;
+    font-size: 400%;
+    padding-bottom: 30px;
 }
 
 .container {
@@ -54,16 +65,91 @@ html, body {
 }
 
 .dotline {
+    display: flex;
     border-top: dashed;
     color: rgb(67, 59, 79);
     margin: 0px;
     border-width: 1px;
+    justify-content: space-between;
 }
 
-.readmore{
+.readmore {
+    display: flex-start;
+    align-items: left;
     font-size: 120%;
-margin: 30px;
-font-weight: 700;
+    margin: 30px;
+    font-weight: 700;
+}
 
+.purpbox {
+    font-family: 'Plus', 'solid';
+    display: flex-end;
+    color: white;
+    font-size: 280%;
+    background-color: rgb(182, 124, 251);
+    margin: 0;
+    padding: 20px;
+}
 
+.purpdates {
+    display: flex;
+    /* align-items: left; */
+}
+
+.dates {
+    display: flex-start;
+    background-color: rgb(182, 124, 251);
+    text-align: center;
+    font-size: 130%;
+    width: 180px;
+    padding: 30px;
+}
+
+.datetext {
+    font-family: 'Baloo Chettan 2', cursive;
+    color: white;
+    font-size: 280%;
+    line-height: 80%;
+}
+
+.text {
+    font-family: 'Baloo Chettan 2', cursive;
+    font-weight: 400;
+    display: flex-end;
+    background-color: rgb(182, 124, 251);
+    color: white;
+    font-size: 160%;
+    padding: 20px;
+    width: 100%;
+}
+
+/* I couldnt find out how to make this reference prev styles. */
+
+.dates2 {
+    display: flex-start;
+    background-color: rgb(200, 163, 248);
+    text-align: center;
+    font-size: 130%;
+    width: 180px;
+    padding: 30px;
+}
+
+.text2 {
+    font-family: 'Baloo Chettan 2', cursive;
+    font-weight: 400;
+    display: flex-end;
+    background-color: rgb(200, 163, 248);
+    color: white;
+    font-size: 160%;
+    padding: 20px;
+    width: 100%;
+}
+
+.footer {
+    background-color: rgb(28, 22, 36);
+    color: white;
+    text-align: center;
+    font-size: 80%;
+    padding: 30px;
+    line-height: 200%;
 }
