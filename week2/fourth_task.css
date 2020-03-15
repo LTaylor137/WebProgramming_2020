@@ -1,4 +1,4 @@
-html, body, input {
+html, body {
     background-color: rgb(242, 242, 242);
     color: white;
     text-align: center;
@@ -6,6 +6,20 @@ html, body, input {
     border: 0px;
     font-family: 'Spartan', sans-serif;
     font-size: 15px;
+}
+
+input {
+    color: black;
+    margin: 0;
+    border: 0px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+::placeholder {
+    color: rgb(62, 75, 86);
+    font-weight: normal;
 }
 
 .container {
@@ -79,7 +93,6 @@ html, body, input {
 
 .fnln {
     width: 50%;
-    color: rgb(62, 75, 86);
     background-color: rgb(242, 242, 242);
     padding: 20px;
     padding-top: 23px;
@@ -94,7 +107,6 @@ html, body, input {
 }
 
 .email {
-    color: rgb(62, 75, 86);
     display: flex;
     background-color: rgb(242, 242, 242);
     padding: 20px;
