@@ -1,8 +1,9 @@
-html, body {
-    background-color: white;
+html, body, input {
+    background-color: rgb(242, 242, 242);
     color: white;
     text-align: center;
     margin: 0;
+    border: 0px;
     font-family: 'Spartan', sans-serif;
     font-size: 15px;
 }
@@ -26,7 +27,6 @@ html, body {
 }
 
 .hori {
-    
     display: flex;
     align-content: stretch;
 }
@@ -36,6 +36,7 @@ html, body {
 }
 
 .facebook {
+    margin-top: 30px;
     width: 50%;
     display: flex;
     background-color: rgb(61, 89, 154);
@@ -44,10 +45,20 @@ html, body {
     height: 15px;
     text-align: left;
     vertical-align: -25%;
+    cursor: pointer;
+}
 
+.facebook:hover {
+    transition-duration: 0.3s;
+    background-color: rgb(81, 119, 174);
+}
+
+.facebook:active {
+    background-color: rgb(213, 223, 230);
 }
 
 .twitter {
+    margin-top: 30px;
     width: 50%;
     display: flex;
     background-color: rgb(84, 172, 236);
@@ -55,17 +66,32 @@ html, body {
     margin-bottom: 30px;
     height: 15px;
     text-align: left;
+    cursor: pointer;
+}
+
+.twitter:hover {
+    transition-duration: 0.3s;
+    background-color: rgb(114, 192, 266);
+}
+
+.twitter:active {
+    background-color: rgb(220, 230, 236);
 }
 
 .fnln {
     width: 50%;
     color: rgb(62, 75, 86);
-    /* display: flex; */
     background-color: rgb(242, 242, 242);
     padding: 20px;
+    padding-top: 23px;
     margin-bottom: 30px;
-    height: 15px;
     text-align: left;
+}
+
+.fnln:focus {
+    outline: none;
+    border-left: 5px solid rgb(0, 178, 65);
+    padding-left: 15px;
 }
 
 .email {
@@ -73,9 +99,15 @@ html, body {
     display: flex;
     background-color: rgb(242, 242, 242);
     padding: 20px;
+    padding-top: 23px;
     margin-bottom: 30px;
-    height: 15px;
     text-align: left;
+}
+
+.email:focus {
+    outline: none;
+    border-left: 5px solid rgb(0, 178, 65);
+    padding-left: 15px;
 }
 
 .create {
@@ -83,13 +115,33 @@ html, body {
     padding: 20px;
     margin-bottom: 30px;
     height: 15px;
+    cursor: pointer;
+}
+
+.create:hover {
+    transition-duration: 0.3s;
+    background-color: rgb(30, 208, 95);
+}
+
+.create:active {
+    background-color: rgb(217, 235, 212);
 }
 
 .text {
     margin-bottom: 30px;
 }
 
+.text2 {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
 .link {
     text-decoration: none;
     color: rgb(84, 172, 236);
 }
+
+/* .link:visited {
+    text-decoration: none;
+    color: rgb(41, 86, 119);
+} */
