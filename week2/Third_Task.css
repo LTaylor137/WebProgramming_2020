@@ -153,3 +153,13 @@ html, body {
     padding: 30px;
     line-height: 200%;
 }
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.linkp {
+    text-decoration: none;
+    color: rgb(67, 59, 79);
+}
