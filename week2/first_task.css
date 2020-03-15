@@ -51,6 +51,15 @@ html, body {
     border-radius: 5px;
 } 
 
+.button:hover {
+    transition-duration: 0.3s;
+    background-color: rgb(184, 219, 119);
+} 
+
+.button:active {
+    background-color: rgb(216, 226, 196);
+} 
+
 .buttonmargin {
     margin-top: 20px;
     margin-bottom: 20px;
