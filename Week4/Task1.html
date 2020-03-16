@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Call</title>
+
+    <link rel="stylesheet" href="Task1.css" />
+
+</head>
+
+<body>
+
+    <h1 class="h1">JavaScript Time!</h1>
+
+    <button class="button" id="getdatebutton">What's the time javascript?</button>
+
+    <!-- where date prints -->
+    <p id="printdatetime"></p>
+
+    <script>
+        // defines function
+        getdatebutton.onclick = buttonclick
+
+        function buttonclick() {
+            var d = new Date();
+            document.getElementById("printdatetime").innerHTML = d;
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
