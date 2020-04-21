@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <link rel="stylesheet" href="ToDoList.css" />
+
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div class="title">
+            <a>To Do List</a>
+        </div>
+
+        <div>
+            <form>
+                <input type="text" id="UserInput" placeholder="enter list items here">
+                <button type="submit" id="AddButton">Add</button>
+                <button type="button" id="RemoveAll">Remove All</button>
+            </form>
+        </div>
+
+        <div id="List">
+            <ul>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+
+        // variables
+        var List = document.getElementById("List");
+        var UserInput = document.getElementById("UserInput");
+        var AddButton = document.getElementById("AddButton");
+        var RemoveAll = document.getElementById("RemoveAll");
+
+        //add list item function
+        AddButton.onclick = function Add() {
+
+            var LIbox = document.createElement("div");
+            List.append(LIbox);
+            // this.parentNode.style.align = "right";
+
+            var ListItem = document.createElement("li");
+            LIbox.append(ListItem);
+            ListItem.innerHTML = UserInput.value;
+            ListItem.classList.add("list");
+            ListItem.style.color = "#00d81d";
+
+            //this is a cheat. couldnt work out how to justify content
+            var spacer = document.createElement("x");
+            ListItem.append(spacer);
+            spacer.innerHTML = " . . . . . . ";
+            spacer.style.color = "#FFFFFF";
+
+            //change colour list item function
+            ListItem.onclick = function CheckItem() {
+                ListItem.classList.add("check");
+                ListItem.style.color = "grey";
+            }
+
+            //adds the delete button
+            var DeleteButton = document.createElement("text");
+            spacer.append(DeleteButton);
+            DeleteButton.innerHTML = "remove";
+            DeleteButton.style.color = "red";
+    
+
+
+            //delete list item function
+            DeleteButton.onclick = function Remove() {
+                ListItem.remove();
+            }
+
+            //resets input text box
+            UserInput.value = "";
+
+            //pauses event
+            event.preventDefault();
+
+        }
+
+        // removes all items from list
+        RemoveAll.onclick = function RemoveAll() {
+            List.innerHTML = "";
+        }
+
+    </script>
+
+
+</body>
+
+</html>

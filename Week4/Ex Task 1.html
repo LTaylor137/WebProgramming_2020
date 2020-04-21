@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
+    <title>Ex Task 1</title>
 </head>
 
 
@@ -12,36 +12,47 @@
 <body>
 
     <input type="number" id="input1" name="input1" value="0">
+
     <br><br>
     +
     <br><br>
+
     <input type="number" id="input2" name="input2" value="0">
 
     <button class="button" id="button">Click me please.</button>
+
     <br><br>
-    value = <answer>
 
-        <script>
+    <p>value = <a id="answer"></a></p>
 
-            let value1 = document.getElementById("input1");
-            let value2 = document.getElementById("input2");
-            let button = document.getElementById("button");
+    <script>
 
-            // let answer = 0;
-
-            console.log(value1.value)
-            console.log(value2.value)
-
-            button.onclick = calculate;
-
-            function calculate() {
-                let input1 = Number(value1.value);
-                let input2 = Number(value2.value);
-                console.log(input1 + input2);
-            }
+        
+        let value1 = document.getElementById("input1");
+        let value2 = document.getElementById("input2");
+        let button = document.getElementById("button");
+        let answer = 0;
 
 
-        </script>
+        console.log(value1.value)
+        console.log(value2.value)
+
+        button.onclick = calculate;
+
+        function calculate() {
+            let input1 = Number(value1.value);
+            let input2 = Number(value2.value);
+
+            let answer = (input1 + input2);
+
+            console.log(input1 + input2);
+
+            document.getElementById("answer").innerHTML = answer;
+        }
+
+        document.getElementById("answer").innerHTML = answer;
+
+    </script>
 
 
 
