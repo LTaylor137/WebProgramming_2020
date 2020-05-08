@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+    <b id="vld"></b>
+    <br/>
+    <input id="fn" type="text" onblur="myFunction()" />
+
+    <select id="ddlselect" onchange="myFunction()">
+        <option value="Select">Select</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>  
+
+    <input id="sn" type="text" onblur="myFunction()" />  <label>=</label>
+    <input id="rn" type="text" readonly/>
+    
+    <script type="text/javascript">
+       
+        function myFunction()
+        {
+            
+            var x =  document.getElementById("ddlselect").value;
+            var fn = parseInt(document.getElementById("fn").value);
+            var sn = parseInt(document.getElementById("sn").value);
+            var rn = document.getElementById("rn");
+
+            if (isNaN(fn)) {
+                document.getElementById("vld").innerHTML = "Invalid Number in the first text box";
+                return;
+
+            }
+            if (isNaN(sn))
+            {
+                document.getElementById("vld").innerHTML = "Invalid Number in the second text box";
+                return;
+
+            }
+
+            switch(x)
+            {
+                case "Select":
+                      document.getElementById("vld").innerHTML = "Please Select Arithmetic Operator";
+                    rn.value ="";
+		    return;
+                case "+":
+                    rn.value = fn + sn;
+                    break;
+                case "-":
+                    rn.value = fn - sn;
+                    break;
+                case "*":
+                    rn.value = fn * sn;
+                    break;
+                case "/":
+                    rn.value = fn / sn;
+                    break;
+                case "%":
+                    rn.value = fn % sn;
+                    break;
+            }
+            document.getElementById("vld").innerHTML = "";
+        }
+
+    </script>
+
+</body>
+</html>
