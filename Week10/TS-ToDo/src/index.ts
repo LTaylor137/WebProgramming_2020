@@ -16,43 +16,36 @@ if (AddButton == null) {
         if (List == null) {
             alert("button not found");
         } else {
-            var LIbox = document.createElement("div");
+            var LIbox:HTMLDivElement = document.createElement("div");
             LIbox.classList.add("listitembox");
             List.append(LIbox);
         
-
             if (UserInput == null) {
                 alert("input not found");
             } else {
-                var ListItem = document.createElement("li");
+                console.log("list item created.")
+                var ListItem:HTMLDivElement = document.createElement("div");
+                ListItem.classList.add("listitem");
                 LIbox.append(ListItem);
                 ListItem.innerHTML = UserInput.value;
-                ListItem.classList.add("listitem");
-                ListItem.style.color = "#00d81d";
-
-                //this is a cheat. couldnt work out how to justify content
-                var spacer = document.createElement("x");
-                ListItem.append(spacer);
-                spacer.innerHTML = " . . . . . . ";
-                spacer.style.color = "#FFFFFF";
 
                 //change colour list item function
                 ListItem.onclick = function CheckItem() {
                     console.log("listitemchecked")
-                    ListItem.classList.add("check");
-                    ListItem.style.color = "grey";
+                    ListItem.classList.add("checked");
                 }
 
                 //adds the delete button
-                var DeleteButton = document.createElement("text");
-                spacer.append(DeleteButton);
+                var DeleteButton:HTMLDivElement = document.createElement("div");
+                LIbox.append(DeleteButton);
                 DeleteButton.classList.add("listdel");
                 DeleteButton.innerHTML = "remove";
                
-
                 //delete list item function
                 DeleteButton.onclick = function Remove() {
                     ListItem.remove();
+                    DeleteButton.remove();
+                    LIbox.remove();
                 }
 
                 //resets input text box
@@ -73,7 +66,6 @@ if (AddButton == null) {
                         console.log("RemoveAll not found");
                     } else {
                         RemoveAll.onclick = function RemoveAll() {
-                            if (RemoveAll == null) return;
                             if (List == null) return;
                             List.innerHTML = "";
                         }

@@ -21,11 +21,15 @@
 }
 
 .listitembox {
-    display: flex;
+    /* border: 1px solid #d0d1d1; */
+    width: 300px;
+    display: inline-flex;
     justify-content: space-between;
 }
 
 .listitem {
+    cursor: pointer;
+    display: inline-flex;
     font-weight: bold;
     line-height: 35px;
     font-family: 'Arial';
@@ -34,6 +38,7 @@
 }
 
 .listdel {
+    cursor: pointer;
     align-items: right;
     font-weight: bold;
     line-height: 35px;
