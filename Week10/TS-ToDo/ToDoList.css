@@ -1,34 +1,48 @@
 .box {
     justify-content: center;
-    max-width: 500px;
+    max-width: 300px;
     margin: auto;
     left: 50%;
 }
 
 .title {
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     line-height: 35px;
     font-family: 'Arial';
     color: rgb(66, 66, 66);
-    font-size: 130%;
+    font-size: 150%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .list {
-    /* display: flex; */
-    list-style-type: none;
+    width: 300px;
+}
+
+.listitembox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.listitem {
     font-weight: bold;
     line-height: 35px;
     font-family: 'Arial';
     margin: 20px;
-    flex-direction: column;
-    justify-content: auto;
-    /* text-decoration: line-through; */
-  
+    color: #00d81d;
 }
 
-.check {
+.listdel {
+    align-items: right;
+    font-weight: bold;
+    line-height: 35px;
+    font-family: 'Arial';
+    margin: 20px;
+    color: red;
+}
+
+.checked {
     text-decoration: line-through;
+    color: grey;
 }
