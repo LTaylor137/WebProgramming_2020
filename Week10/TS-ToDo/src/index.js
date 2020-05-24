@@ -11,15 +11,13 @@ else {
     AddButton.onclick = function Add(event) {
         event.preventDefault();
         console.log(AddButton);
-        if (AddButton == null)
-            return;
         if (List == null) {
-            alert("button not found");
+            alert("List not found");
         }
         else {
-            var LIbox_1 = document.createElement("div");
-            LIbox_1.classList.add("listitembox");
-            List.append(LIbox_1);
+            var LIBox_1 = document.createElement("div");
+            LIBox_1.classList.add("listitembox");
+            List.append(LIBox_1);
             if (UserInput == null) {
                 alert("input not found");
             }
@@ -27,7 +25,7 @@ else {
                 console.log("list item created.");
                 var ListItem_1 = document.createElement("div");
                 ListItem_1.classList.add("listitem");
-                LIbox_1.append(ListItem_1);
+                LIBox_1.append(ListItem_1);
                 ListItem_1.innerHTML = UserInput.value;
                 var checked_1 = new Boolean(false);
                 var RemoveButton_1 = document.createElement("div");
@@ -41,14 +39,14 @@ else {
                         ListItem_1.classList.remove("listitem");
                         ListItem_1.classList.add("checked");
                         //adds the delete button
-                        LIbox_1.append(RemoveButton_1);
+                        LIBox_1.append(RemoveButton_1);
                         RemoveButton_1.classList.add("listdel");
                         RemoveButton_1.innerHTML = "remove";
                         //delete list item function
                         RemoveButton_1.onclick = function Remove() {
                             ListItem_1.remove();
                             RemoveButton_1.remove();
-                            LIbox_1.remove();
+                            LIBox_1.remove();
                         };
                         //change back to green
                     }

@@ -11,14 +11,13 @@ if (AddButton == null) {
     AddButton.onclick = function Add(event) {
         event.preventDefault();
         console.log(AddButton);
-        if (AddButton == null) return;
 
         if (List == null) {
-            alert("button not found");
+            alert("List not found");
         } else {
-            let LIbox: HTMLDivElement = document.createElement("div");
-            LIbox.classList.add("listitembox");
-            List.append(LIbox);
+            let LIBox: HTMLDivElement = document.createElement("div");
+            LIBox.classList.add("listitembox");
+            List.append(LIBox);
 
             if (UserInput == null) {
                 alert("input not found");
@@ -26,7 +25,7 @@ if (AddButton == null) {
                 console.log("list item created.")
                 let ListItem: HTMLDivElement = document.createElement("div");
                 ListItem.classList.add("listitem");
-                LIbox.append(ListItem);
+                LIBox.append(ListItem);
                 ListItem.innerHTML = UserInput.value;
 
                 let checked = new Boolean(false);
@@ -44,7 +43,7 @@ if (AddButton == null) {
                         ListItem.classList.add("checked");
 
                         //adds the delete button
-                        LIbox.append(RemoveButton);
+                        LIBox.append(RemoveButton);
                         RemoveButton.classList.add("listdel");
                         RemoveButton.innerHTML = "remove";
 
@@ -52,7 +51,7 @@ if (AddButton == null) {
                         RemoveButton.onclick = function Remove() {
                             ListItem.remove();
                             RemoveButton.remove();
-                            LIbox.remove();
+                            LIBox.remove();
                         }
 
                         //change back to green
