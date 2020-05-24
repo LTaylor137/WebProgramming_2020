@@ -29,40 +29,42 @@ if (AddButton == null) {
                 LIbox.append(ListItem);
                 ListItem.innerHTML = UserInput.value;
 
-                //change colour list item function
+                let checked = new Boolean(false);
+                let RemoveButton: HTMLDivElement = document.createElement("div");
+
+                //change colour of list item
                 ListItem.onclick = function CheckItem() {
-
-                    let DeleteButton: HTMLDivElement = document.createElement("div");
-
+                    
                     //change to grey and checked
-                    if (ListItem.classList.contains("listitem")) {
+                    if (checked == false) {
+                        checked = true;
                         console.log("listitem checked")
+                        console.log("checked = " + checked)
                         ListItem.classList.remove("listitem");
                         ListItem.classList.add("checked");
 
                         //adds the delete button
-                        LIbox.append(DeleteButton);
-                        DeleteButton.classList.add("listdel");
-                        DeleteButton.innerHTML = "remove";
-                        console.log(DeleteButton)
+                        LIbox.append(RemoveButton);
+                        RemoveButton.classList.add("listdel");
+                        RemoveButton.innerHTML = "remove";
 
                         //delete list item function
-                        DeleteButton.onclick = function Remove() {
+                        RemoveButton.onclick = function Remove() {
                             ListItem.remove();
-                            DeleteButton.remove();
+                            RemoveButton.remove();
                             LIbox.remove();
                         }
-                        
+
                         //change back to green
-                    } else if (ListItem.classList.contains("checked")) {
+                    } else if (checked == true) {
+                        checked = false;
                         console.log("listitem unchecked")
+                        console.log("checked = " + checked)
                         ListItem.classList.remove("checked");
                         ListItem.classList.add("listitem");
 
                         //removes the delete button again
-                        DeleteButton.remove();
-                        DeleteButton.innerHTML = "";
-                        console.log(DeleteButton)
+                        RemoveButton.remove();
                     }
                 }
 
