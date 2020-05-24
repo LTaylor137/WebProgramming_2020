@@ -16,36 +16,54 @@ if (AddButton == null) {
         if (List == null) {
             alert("button not found");
         } else {
-            var LIbox:HTMLDivElement = document.createElement("div");
+            let LIbox: HTMLDivElement = document.createElement("div");
             LIbox.classList.add("listitembox");
             List.append(LIbox);
-        
+
             if (UserInput == null) {
                 alert("input not found");
             } else {
                 console.log("list item created.")
-                var ListItem:HTMLDivElement = document.createElement("div");
+                let ListItem: HTMLDivElement = document.createElement("div");
                 ListItem.classList.add("listitem");
                 LIbox.append(ListItem);
                 ListItem.innerHTML = UserInput.value;
 
                 //change colour list item function
                 ListItem.onclick = function CheckItem() {
-                    console.log("listitemchecked")
-                    ListItem.classList.add("checked");
-                }
 
-                //adds the delete button
-                var DeleteButton:HTMLDivElement = document.createElement("div");
-                LIbox.append(DeleteButton);
-                DeleteButton.classList.add("listdel");
-                DeleteButton.innerHTML = "remove";
-               
-                //delete list item function
-                DeleteButton.onclick = function Remove() {
-                    ListItem.remove();
-                    DeleteButton.remove();
-                    LIbox.remove();
+                    let DeleteButton: HTMLDivElement = document.createElement("div");
+
+                    //change to grey and checked
+                    if (ListItem.classList.contains("listitem")) {
+                        console.log("listitem checked")
+                        ListItem.classList.remove("listitem");
+                        ListItem.classList.add("checked");
+
+                        //adds the delete button
+                        LIbox.append(DeleteButton);
+                        DeleteButton.classList.add("listdel");
+                        DeleteButton.innerHTML = "remove";
+                        console.log(DeleteButton)
+
+                        //delete list item function
+                        DeleteButton.onclick = function Remove() {
+                            ListItem.remove();
+                            DeleteButton.remove();
+                            LIbox.remove();
+                        }
+                        
+                        //change back to green
+                    } else if (ListItem.classList.contains("checked")) {
+                        console.log("listitem unchecked")
+                        ListItem.classList.remove("checked");
+                        ListItem.classList.add("listitem");
+
+                        //removes the delete button again
+                        DeleteButton.remove();
+                        DeleteButton.innerHTML = "";
+                        console.log(DeleteButton)
+                    }
                 }
 
                 //resets input text box

@@ -1,3 +1,7 @@
+html {
+    user-select: none;
+}
+
 .box {
     justify-content: center;
     max-width: 300px;
@@ -37,6 +41,17 @@
     color: #00d81d;
 }
 
+.checked {
+    text-decoration: line-through;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: bold;
+    line-height: 35px;
+    font-family: 'Arial';
+    margin: 20px;
+    color: grey;
+}
+
 .listdel {
     cursor: pointer;
     align-items: right;
@@ -45,9 +60,5 @@
     font-family: 'Arial';
     margin: 20px;
     color: red;
-}
-
-.checked {
-    text-decoration: line-through;
-    color: grey;
+    
 }

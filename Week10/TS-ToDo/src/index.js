@@ -15,11 +15,6 @@ AddButton.onclick = function Add() {
     ListItem.innerHTML = UserInput.value;
     ListItem.classList.add("list");
     ListItem.style.color = "#00d81d";
-    //this is a cheat. couldnt work out how to justify content
-    var spacer = document.createElement("x");
-    ListItem.append(spacer);
-    spacer.innerHTML = " . . . . . . ";
-    spacer.style.color = "#FFFFFF";
     //change colour list item function
     ListItem.onclick = function CheckItem() {
         ListItem.classList.add("check");
