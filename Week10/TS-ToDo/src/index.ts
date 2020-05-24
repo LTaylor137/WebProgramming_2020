@@ -85,6 +85,7 @@ if (AddButton == null) {
                         console.log("RemoveAll not found");
                     } else {
                         RemoveAll.onclick = function RemoveAll() {
+                            console.log("RemoveAll pressed");
                             if (List == null) return;
                             List.innerHTML = "";
                         }
