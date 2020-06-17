@@ -4,7 +4,7 @@ html {
 
 .box {
     justify-content: center;
-    max-width: 300px;
+    max-width: 310px;
     margin: auto;
     left: 50%;
 }
@@ -21,7 +21,7 @@ html {
 }
 
 .list {
-    width: 300px;
+    width: 310px;
 }
 
 .listitembox {

@@ -1,15 +1,16 @@
 {
-  "name": "nodejstypescripttest",
+  "name": "ts-todo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.9.3"
+  },
   "scripts": {
     "start": "tsc && node dist/index.js",
     "build": "tsc && echo 'hello'"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "typescript": "^3.8.3"
-  }
+  "license": "ISC"
 }
